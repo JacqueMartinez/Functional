@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      INICIO
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+   <div>
+    <ion-item-sliding *ngFor= "let lugar of lugares">
+      <ion-item (click)="irAVistaDetalle(lugar)">
+        <ion-avatar item-start>
+          <ng-container *ngIf=" lugar.categoria; else elseTemplate">
+              <img src="{{lugar.foto}}" >
+          </ng-container>
+          <ng-template #elseTemplate>
+              <img src="">
+          </ng-template>
+        </ion-avatar>
+        
+        <h2>{{lugar.nombre}}</h2>
+        <h3>{{lugar.direccion}}</h3>
+        <h3>{{lugar.categoria}}</h3>
+        
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="deleteLugar(lugar)">
+          <ion-icon name="trash"></ion-icon>
+          Borrar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+   </div>
+  </ion-list>
+  <ion-fab  color="primary" right bottom>
+      <button ion-fab (click)="irAVistaDetalle()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+  
+  <!-- <button ion-button color="light"(click)="entrar()">ENTRAR</button>
+  <button ion-button color="light"(click)="registrar()">REGISTRAR</button> -->
+ 
+
+</ion-content>
+

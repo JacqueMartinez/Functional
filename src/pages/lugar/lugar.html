@@ -1,0 +1,41 @@
+<!--
+  Generated template for the LugarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Lugar</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+      
+    <ion-item>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="lugar.nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Direccion</ion-label>
+        <ion-input type="text" [(ngModel)]="lugar.direccion"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Categorias</ion-label>
+        <ion-select [(ngModel)] ="lugar.categoria">
+          <ion-option value="Aire Libre">Aire Libre</ion-option>
+          <ion-option value="Lugar Cerrado">Lugar Cerrado</ion-option>
+        </ion-select>
+    </ion-item>
+       <button ion-button full (click)="AceptarLugar()">Guardar Lugar</button>
+      <button ion-button full (click)="takePicture('camera')">Tomar foto</button>
+      <button ion-button full (click)="takePicture('album')">Elegir foto</button>
+      <!-- <button ion-button (click)="localizacion()">Localizacion</button> -->
+  </ion-list>
+  <div padding style="padding-top: 0px; padding-bottom: 0px">
+</div>
+    <!-- <button ion-button color="light"(click)="navegarATercera()">Tercera </button>
+    <button ion-button color="light"(click)="navegarBack()">Regresar </button>
+
+<h1>{{nombreLugar}}</h1> -->
+</ion-content>

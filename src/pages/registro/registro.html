@@ -1,0 +1,28 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content padding cl>
+  <ion-card>
+       <ion-card-header>
+         REGISTRO
+       </ion-card-header>
+       <ion-card-content>
+         <ion-list no-line>
+           <ion-item>
+             <ion-input type="email" placeholder="correo" [(ngModel)]="email"></ion-input>
+           </ion-item>
+           <ion-item>
+               <ion-input type="password" placeholder="contraseña" [(ngModel)]="password"></ion-input>
+           </ion-item>
+           <button ion-button block outline color="light" (click)="register()">REGISTRARSE</button>
+           <p>¿Tiene Cuenta?</p>
+           <a (click)="irLogin()">INICIAR SESIÓN</a>
+         </ion-list>
+       </ion-card-content>
+     </ion-card> 
+
+</ion-content>
